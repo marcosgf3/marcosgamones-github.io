@@ -1,0 +1,973 @@
+/*la escructura se basa en un div (padre) formado por header el cual dentro tiene un menú que será la barra de navegacion(inicio, sobre mi y contactar), debajo tengo una section la cual esta formada por un div articulos y un aside (los alineo por filas).
+Dentro de articulos tengo las avidivanzas y todo lo que va cambiando al pasar de paginas(ordeno por columnas), dentro del  aside (lo pongo por columna)  hago la barra de la izquierda ( ahorcado, juego de la rana , calcladora y otros)
+Debjo pongo el foooter*
+Todo ello con propiedades Flex-box*/
+
+/*------------------------importo las fuentes de google fonts---------*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    /*-----------------------------------estilo PC >1200px (por defecto)-------------------*/
+    margin: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #cfe676;
+}
+
+.padre {
+    display: flex;
+    flex-flow: column nowrap;/*alineo por columnas y sin mantener el ajuste a la columna*/
+}
+
+.header {
+    background-color: #000;
+}
+
+.menu {
+    background-color: #3888ff;
+    display: flex; 
+    flex-direction: row; /*alineo por filas*/
+    text-align: center;
+    font-size: 35px;
+    height: 88px;
+
+    font-family: cursive;
+
+}
+
+.a1 {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.inicio {
+
+    flex: 0, 5 1 auto;
+
+    background-color: #8394ad;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.inicio:hover,
+.sobremi:hover,
+.contactar:hover {
+    background-color: #117a39;
+}
+
+.sobremi {
+    background-color: #8394ad;
+    flex: 0, 5 1 auto;
+    color: aliceblue;
+    border-radius: 3px;
+    padding: 10px;
+
+}
+
+.contactar {
+    background-color: #8394ad;
+    flex: 0, 5 1 auto;
+    color: aliceblue;
+    border-radius: 3px;
+    padding: 10px;
+
+}
+
+.icono {
+    background-color: #3888ff;
+    flex: 1 1 2%;
+    color: aliceblue;
+    text-align: left;
+
+}
+
+#logo1 {
+    background-color: black;
+    width: 50px;
+
+}
+
+.texto-principal {
+    background-color: #ce2727;
+}
+
+h1 {
+    background-color: #5c41bd;
+}
+
+.section {
+    background-color: #cfe676;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.articulosAli {
+    background-color: coral;
+    flex-flow: column nowrap;/*los alineao por columnas y sin respetar el ajuste a la columna*/
+    display: flex;
+    flex: 2 1 auto;
+    border: 3px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.articulos {
+    background-color: coral;
+    flex-flow: row wrap;/*los alineao por filas y respetando el ajuste de la  linea*/
+    display: flex;
+    flex: 2 1 auto;
+    border: 3px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.articuloalimentos:hover,
+.articuloanimales:hover,
+.articulogeografia:hover,
+.articulodeportes:hover,
+.articulomusica:hover,
+.articuloropa:hover {
+    background-color: #b50a0a;
+}
+
+.articuloalimentos,
+.articulogeografia,
+.articulodeportes,
+.articuloropa,
+.articulomusica,
+.articuloanimales {
+
+    flex: 1 1 30%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin: 10px 10px;
+    border: 3px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.articuloalimentos {
+    background-color: #12d469;
+
+}
+
+.articuloanimales {
+    background-color: darkkhaki;
+}
+
+.articulogeografia {
+    background-color: #2c90e8;
+}
+
+
+.articuloropa {
+    background-color: #dee204;
+}
+
+.articulomusica {
+    background-color: #7b5ba1;
+}
+
+.articulodeportes {
+    background-color: #e565e9;
+}
+
+.texto_boton {
+    text-decoration: none;
+    color: white;
+}
+
+.navegacion {
+    background-color: brown;
+    flex: 1 1 0%;
+    font-size: 20px;
+    color: aliceblue;
+    font-style: oblique;
+    border: 1px;
+    border-color: #f6f0f0;
+    border-style: dashed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+aside {
+    background-color: coral;
+    border: 3px;
+    border-color: #000;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;/* escacio las cajas de calculadora , ahorcado ,rana y otros para que ocupan todo el ancho regularmente*/
+}
+
+.publicidad {
+    background-color: crimson;
+    width: 170px;
+    height: 190px;
+    background-color: aquamarine;
+
+    text-align: center;
+    padding-top: 10px;
+    font-family: cursive;
+    border-radius: 2px;
+    border-color: #333;
+    border-style: solid;
+}
+
+div.preguntas {
+    border-style: dotted;
+    border-color: green;
+    height: 170px;
+    background-color: #c6d48e;
+    text-align: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.imagen img.derecha {/* ajusto las imagenes del lado derecho de las adivinanzas*/
+    width: 125px;
+    float: right;
+    margin-top: -55px;
+    margin-right: 1%;
+}
+
+.imagen img.izquierda {/* ajusto las imagenes del lado izquierdo de las adivinanzas*/
+    width: 125px;
+    float: left;
+    margin-top: -55px;
+    margin-left: 1%;
+    transform: rotateY(180deg);
+
+}
+
+.calculadora {
+    width: 150px;
+    max-width: 100%;
+}
+
+.ahorcado {
+    width: 120px;
+    max-width: 100%;
+}
+
+.footer9 {
+    background-color: #cfe676;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #c6d48e;
+    flex-grow: 3;
+}
+
+/*--------------------------------version tablet entre 600 y 1200px --------------------*/
+@media screen and (min-width: 601px) and (max-width: 1199px) {
+    body {
+        background-color: #dcb4e4;
+    }
+    .imagen img.derecha {/* ajusto las imagenes del lado derecho de las adivinanzas*/
+        width: 65px;
+        float: right;
+        margin-top: -5px;
+        margin-right: 1%;
+    }
+    .imagen img.izquierda {/* ajusto las imagenes del lado izquierdo de las adivinanzas*/
+        width: 65px;
+        float: left;
+        margin-top: -5px;
+        margin-left: 1%;
+        transform: rotateY(180deg);
+    }
+    div.preguntas {
+        border-style: dotted;
+        border-color: green;
+        height: 170px;
+        background-color: #c6d48e;
+        text-align: center;
+        flex-direction: column;
+        font-size: 17px;
+    }
+    .publicidad {
+        width: 98%;
+        height: 190px;
+        margin: 1px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navegacion {
+        font-size: medium;
+    }
+
+    .section {
+        background-color: #dcb4e4;
+    }
+
+    .menu {
+        background-color: #2cc098;
+    }
+
+    .icono {
+        background-color: #2cc098;
+    }
+
+    #logo1 {
+        background-color: #2cc098;
+    }
+
+    .articulosAli {
+        background-color: rgb(160, 211, 238);
+    }aside {
+        background-color: rgb(160, 211, 238);
+}.menu {
+    
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 25px;
+    height: 88px;
+
+    font-family: cursive;
+}
+}
+
+/*-------------------------version movil (hasta 600px, en una columna) ----------------*/
+
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        font-size: 17px;
+        height: 250px;
+    }
+
+    .icono {
+        text-align: center;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .articulos {
+        flex-direction: column;
+    }
+
+    .publicidad {
+        width: 98%;
+        height: 200px;
+        margin: 1px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calculadora {
+        width: 150px;
+        margin: 0px 30%;
+    }
+
+    .ahorcado {
+        width: 150px;
+        margin: 0px 30%;
+    }
+
+    .navegacion {
+        font-size: medium;
+    }
+
+    .imagen img.derecha {/* ajusto las imagenes del lado derecho de las adivinanzas*/
+        width: 80px;
+        float: right;
+        margin-top: -5px;
+        margin-right: 1%;
+    }
+
+    .imagen img.izquierda {/* ajusto las imagenes del lazo izquierdos de las adivinanzas*/
+        width: 80px;
+        float: left;
+        margin-top: -5px;
+        margin-left: 1%;
+        transform: rotateY(180deg);
+    }
+
+    .pie {
+        display: flex;
+
+        width: 4000px;
+
+        justify-content: center;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pie0 {
+        height: 55px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    div.preguntas {/*------diseño los div de las preguntas*/
+        border-style: dotted;
+        border-color: green;
+        height: 170px;
+        background-color: #c6d48e;
+        text-align: center;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    form#pago {
+        width: 350px;
+    }
+
+    #calculadora {
+        background: rgb(182, 147, 32);
+        border: 0;
+        width: 200px;
+        border-style: ridge;
+        border-color: #000;
+        border-width: 6px;
+        margin: 5% 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 0%;
+    }
+
+}
+
+/*-------------------------preegunta extra alimentos----------------*/
+
+.manzana {
+    background-image: url('/imagenes/manzana.png');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+.naranja {
+    background-image: url('/imagenes/naranja.png');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+.tomate {
+    background-image: url('/imagenes/tomate.png');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+.platano {
+    background-image: url('/imagenes/platano.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+/*-------------------------preegunta extra animales----------------*/
+.jirafa {
+    background-image: url('/imagenes/jirafa.png');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+.elefante {
+    background-image: url('/imagenes/elefante2.png');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+.canguro {
+    background-image: url('/imagenes/canguro.png');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+.camello {
+    background-image: url('/imagenes/camello.png');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 190px;
+    /* Ajusta al tamaño deseado */
+}
+
+/*-------------------------preegunta extra geografia----------------*/
+.uk {
+    background-image: url('/imagenes/uk.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 120px;
+    /* Ajusta al tamaño deseado */
+}
+
+.finlandia {
+    background-image: url('/imagenes/finlandia.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 120px;
+    /* Ajusta al tamaño deseado */
+}
+
+.noruega {
+    background-image: url('/imagenes/noruega1.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 120px;
+    /* Ajusta al tamaño deseado */
+}
+
+.suecia {
+    background-image: url('/imagenes/suecia.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 120px;
+    /* Ajusta al tamaño deseado */
+}
+
+/*---------------------------pregunta extra musica------------------------------------------*/
+.raphael {
+    background-image: url('/imagenes/RAPHAEL.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+.maluma {
+    background-image: url('/imagenes/maluma.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+.julio {
+    background-image: url('/imagenes/JULIO.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+.kiko {
+    background-image: url('/imagenes/kiko2.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+/*---------------------------pregunta extra deporte------------------------------------------*/
+.torres {
+    background-image: url('/imagenes/torres.jpeg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+.puyol {
+    background-image: url('/imagenes/puyol.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+.iniesta {
+    background-image: url('/imagenes/iniesta.jpeg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+.villa {
+    background-image: url('/imagenes/villa.jpeg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 200px;
+    /* Ajusta al tamaño deseado */
+    height: 150px;
+    /* Ajusta al tamaño deseado */
+}
+
+/*-----------------------------------preguta extra ropa-----------------------------*/
+.traje_españa {
+    background-image: url('/imagenes/traje_españa.jpeg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 250px;
+    /* Ajusta al tamaño deseado */
+    height: 250px;
+    /* Ajusta al tamaño deseado */
+}
+
+.traje_mexico {
+    background-image: url('/imagenes/traje_mexico.jpeg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 250px;
+    /* Ajusta al tamaño deseado */
+    height: 250px;
+    /* Ajusta al tamaño deseado */
+}
+
+.traje_japon {
+    background-image: url('/imagenes/traje_japon.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 250px;
+    /* Ajusta al tamaño deseado */
+    height: 250px;
+    /* Ajusta al tamaño deseado */
+}
+
+.traje_colombia {
+    background-image: url('/imagenes/traje_colombia.jpg');
+    background-size: cover;
+    border: none;
+    padding: 0;
+    width: 250px;
+    /* Ajusta al tamaño deseado */
+    height: 250px;
+    /* Ajusta al tamaño deseado */
+}
+
+
+
+/*---------------------------------------biografia-----------------------------------*/
+#p1 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px;
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+#p2 {
+    text-align: center;
+    font-family: cursive;
+    font-size: larger;
+    color: rgb(173, 66, 33);
+    background-color: #b6cf87;
+}
+
+.biografia1 {
+    background-color: coral;
+    flex-flow: column nowrap;
+    display: flex;
+    flex: 2 1 auto;
+    border: 3px;
+    border-color: #000;
+    border-style: solid;
+    font-size: 20px;
+
+}
+
+
+figure {
+    display: flex;
+    /* Mostrar imagen y texto en línea */
+    align-items: center;
+    /* Alinear verticalmente */
+    float: left;
+    margin: 20px 40px;
+
+}
+
+figcaption {
+    margin-top: 10px;
+    /* Espacio entre imagen y texto */
+    margin: 20px 40px;
+    text-align: justify;
+}
+
+/*-----------------------------------ahorcado--------------------------------------*/
+.ahorcado1 {
+    background-color: coral;
+    flex-flow: column wrap;
+    align-content: center;
+
+    display: flex;
+    flex: 2 1 auto;
+    border: 3px;
+    border-color: #000;
+    border-style: solid;
+    font-size: 24px;
+
+}
+
+/*----------------------------------formulario-----------------------------------*/
+form#pago {
+    margin: auto;
+    background-color: rgb(206, 238, 238);
+    color: rgb(18, 114, 77);
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 20px;
+    max-width: 650px;
+
+    border: solid 1px rgb(48, 110, 190);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form#pago fieldset {
+    margin: 3px;
+}
+
+form#pago legend {
+    font-weight: bold;
+    color: darkblue;
+    font-size: 1.5em;
+    border: none;
+    margin-top: 2px;
+}
+
+form#pago label {
+    font-weight: bold;
+    text-align: center;
+}
+
+form#pago input {
+    float: right;
+    margin-right: 1px;
+    width: 300px;
+
+}
+
+form#pago ol li {
+    line-height: 35px;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+form#pago [required] {
+    border: solid 1px rgb(127, 0, 139);
+}
+
+input:required {
+    outline: 1px solid rgb(23, 139, 0);
+}
+
+
+.aceptar {
+    float: left;
+    background-color: rgb(5, 139, 0);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.cancelar {
+    float: right;
+    background-color: rgb(204, 13, 13);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+/*--------------------------validacion formulario----------------------------------*/
+input:invalid {
+    border: 2px solid black;
+    background-color: rgb(221, 149, 149);
+    color: white;
+}
+
+input:valid {
+    border: 2px solid black;
+    background-color: greenyellow;
+}
+
+/*----------------------------------calculadora--------------------------------------------------*/
+
+
+
+
+.bodycalculadora {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#calculadora {
+    background: rgb(182, 147, 32);
+    border: 0;
+    width: 550px;
+    height: 520px;
+    border-style: ridge;
+    border-color: #000;
+    border-width: 6px;
+    margin: 5% 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 0%;
+
+
+}
+
+#calculadora td {
+    padding: 4px;
+
+}
+
+.caja_valor {
+    background-color: #3888ff;
+    color: whitesmoke;
+    border: 1px solid #454545;
+    width: 99%;
+    height: 90px;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 26 px;
+    text-align: right;
+}
+
+.boton {
+    width: 64px;
+    border: 1px solid #000;
+    font-size: 30px;
+    cursor: hand;
+    background-color: #fff;
+}
+
+.boton_grande {
+    width: 100%;
+    border: 1px solid #000;
+    font-size: 30px;
+    cursor: hand;
+    background-color: #fff;
+}
+
+.funcion {
+    font-weight: bold;
+    color: crimson;
+}
+
+td :hover {
+    background-color: #38b33a;
+}
+
+.articulosAlical {
+    background-color: coral;
+    flex-flow: row wrap;
+    display: flex;
+    flex: 2 1 auto;
+    border: 3px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.calculadora {
+    width: 150px;
+    max-width: 100%;
+
+
+}

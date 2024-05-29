@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSICA</title>
+    <link rel="stylesheet" href="/css/csshome1.css" />
+</head>
+
+<body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <div class="icono"><a class="a1" href="/html/home1.html"><img id="logo1" src="/imagenes/logo1.png" alt="Logo">
+                </div>
+                <div class="inicio"><a class="a1" href="/html/home1.html">Inicio</a></div>
+                <div class="sobremi"><a class="a1" href="/html/sobremi1.html">Sobre mí</a></div>
+                <div class="contactar"><a class="a1" href="/html/contactar.html">Contactar</a></div>
+            </div>
+            <div class="texto-principal">
+                <h1></h1>
+            </div>
+        </header>
+        <section class="section">
+            <div class="articulosAli">
+                <div class="preguntas">
+                    <p id="preg0" class="preguntas"></p>
+        
+                    <p id="resp0">
+                    </p>
+        
+                    <p class="imagen"><img class="derecha" src="/imagenes/sombrero.png" alt=""><img class="izquierda" src="/imagenes/sombrero.png" alt=""></p>
+        </div>
+        <div class="preguntas">       
+            <p id="preg1" class="preguntas"></p>
+
+            <p id="resp1"></p>
+            <p class="imagen"><img class="derecha" src="/imagenes/calcetines.png" alt=""><img class="izquierda" src="/imagenes/calcetines.png" alt=""></p>
+        </div> 
+        <div class="preguntas">        
+            <p id="preg2"></p>
+
+            <p id="resp2"></p>
+            <p class="imagen"><img class="derecha" src="/imagenes/bufanda.png" alt=""><img class="izquierda" src="/imagenes/bufanda.png" alt=""></p>
+        </div>
+        <div class="preguntas">
+            <p id="preg3"></p>
+
+            <p id="resp3"></p>
+            <p class="imagen"><img class="derecha" src="/imagenes/zapatos.png" alt=""><img class="izquierda" src="/imagenes/zapatos.png" alt=""></p>
+        </div>
+        <div class="preguntas">
+            <p id="preg4"></p>
+
+            <p id="resp4"></p>
+            <p class="imagen"><img class="derecha" src="/imagenes/pantalon.png" alt=""><img class="izquierda" src="/imagenes/pantalon.png" alt=""></p>
+                </div>
+                <div class="preguntas">
+                    <p>ACIERTOS :</p>
+                    <p id="numAciertos"> </p>
+                    <p id="pleno"></p>
+                    <p id="cuatro"></p>
+                    <p id="tres"></p>
+                    <p id="dos"></p>
+                    <p id="cero"></p>           
+           
+        
+                </div>
+                    
+                    <nav class="navegacion">
+                        <div class="preguntasExtraAlimentos">
+                            <div><h2>PREGUNTA EXTRA</h2></div>
+                            <h3>¿Cual es el traje tipico de Colombia? </h3>
+         <button class="traje_japon" type="button"  onclick="incorrecto()" style="background-color: rgba(238, 138, 23, 0.911);"></button>
+        <button  class="traje_mexico" type="button" onclick="incorrecto()" style="background-color: rgb(67, 195, 210);"></button>
+        <button class="traje_españa" type="button" onclick="incorrecto()" style="background-color: rgb(196, 194, 190);"></button>
+        <button class="traje_colombia" type="button" onclick="correcto()" style="background-color: rgb(240, 189, 35);"></button>
+    
+    
+
+                        </div>
+                    </nav>
+
+                
+
+
+
+
+
+
+
+
+            </div>
+            <aside class="aside">
+                <div class="publicidad"><a href="/actividades/calculadora.html">Calculadora<img class="calculadora"
+                            src="/imagenes/tt.png"></a></div>
+                <div class="publicidad"><a href="/actividades/ahorcado1.html">Juego del ahorcado<img class="ahorcado"
+                            src="/imagenes/juegoa.png"></a></div>
+                <div class="publicidad"><a href="https://flexboxfroggy.com/#es" target="_blank">Juego de la rana<img
+                            class="ahorcado" src="/imagenes/raa.png"></a></div>
+                <div class="publicidad"><a href="https://www.minijuegos.com/" target="_blank">Otros juegos<img
+                            class="ahorcado" src="/imagenes/otros.png"></a></div>
+            </aside>
+        </section>
+        <footer class="footer9">
+            <div class="pie0"><a href="/html/home1.html"><img id="logo" src="/imagenes/logo1.png" alt="volver"
+                        height="50px"></a></div>
+            <nav class="pie">
+
+                <p class="copyright"> &copy; Marcos Gonzalez</p>
+            </nav>
+        </footer>
+    </div>
+
+</body>
+<script>
+   const preguntas = ["Redondo como una cazuela, tiene un ala y no vuela. ¿Qué es? ",
+                            "Dos guaridas cálidas con sus escondrijos, para dos hermanos y sus quintillizos. ¿Qué es?",
+                            "Como una culebra soy larga, muy larga; me enrosco en el cuello, doy vueltas y cuelgo.  ¿Qué soy?",
+                            "Con suela y con taco, ni sube ni baja, pero deja huella por donde pasa. ¿Qué soy? ",
+                            "Para salir a la esquina, ponte pan en el talón y camina. ¿Qué soy? "];
+        const respuestas = ["sombrero","calcetines","bufanda","zapato","pantalon"];
+
+    var contestada = [];
+    var acertadas = [];
+
+    var contadoraciertos = 0;
+    const pleno = "¡Has hecho pleno!";
+    const cuatro = "¡Rozando el pleno!";
+    const tres = "¡No estuvo nada mal!";
+    const dos = "¡Tienes que mejorar!";
+    const cero = "Mejor dedicate a otra cosa...";
+
+
+
+    for (i = 0; i < preguntas.length; i++) {
+        contestada[i] = prompt(preguntas[i]);
+        //acertadas[i]=aciertos(i);           
+    }
+
+    function aciertos(num) {
+        if (respuestas[num] === contestada[num]) {
+            contadoraciertos++;
+
+
+            return ("¡Respuesta correcta!")
+
+        } else {
+            return ("¡Respuesta incorrecta! La respuesta es: " + respuestas[num]);
+        }
+    }
+
+    for (i = 0; i < preguntas.length; i++) {
+        switch (i) {
+            case 0:
+                document.getElementById("preg0").innerHTML = preguntas[i];
+                document.getElementById("resp0").innerHTML = aciertos(i);
+                break;
+            case 1:
+                document.getElementById("preg1").innerHTML = preguntas[i];
+                document.getElementById("resp1").innerHTML = aciertos(i);
+                break;
+            case 2:
+                document.getElementById("preg2").innerHTML = preguntas[i];
+                document.getElementById("resp2").innerHTML = aciertos(i);
+                break;
+            case 3:
+                document.getElementById("preg3").innerHTML = preguntas[i];
+                document.getElementById("resp3").innerHTML = aciertos(i);
+                break;
+            case 4:
+                document.getElementById("preg4").innerHTML = preguntas[i];
+                document.getElementById("resp4").innerHTML = aciertos(i);
+                break;
+        }
+
+    } document.getElementById("numAciertos").innerHTML = contadoraciertos;
+
+
+    function correcto() {
+        contadoraciertos++;
+        alert("¡RESPUESTA CORRECTA! ");
+    }
+    function incorrecto() {
+        alert("¡RESPUESTA INCORRECTA! ")
+    }
+
+    if (contadoraciertos == 5) {
+        document.getElementById("pleno").innerHTML = pleno;
+    }
+    if (contadoraciertos == 4) {
+        document.getElementById("cuatro").innerHTML = cuatro;
+    }
+    if (contadoraciertos == 3) {
+        document.getElementById("tres").innerHTML = tres;
+    }
+    if (contadoraciertos == 2 || contadoraciertos == 1) {
+        document.getElementById("dos").innerHTML = dos;
+    }
+    if (contadoraciertos == 0) {
+        document.getElementById("cero").innerHTML = cero;
+    }
+    /*switch (contadoraciertos) {
+        case contadoraciertos == 5:
+            document.getElementById("pleno").innerHTML = pleno;
+            break;
+        case contadoraciertos == 4:
+            document.getElementById("cuatro").innerHTML = cuatro;
+            break;
+        case contadoraciertos ==3:
+            document.getElementById("tres").innerHTML = tres;
+            break;
+        case contadoraciertos ==0:
+            document.getElementById("cero").innerHTML = cero;
+            break;
+*/
+
+
+
+
+
+</script>
+
+</html>

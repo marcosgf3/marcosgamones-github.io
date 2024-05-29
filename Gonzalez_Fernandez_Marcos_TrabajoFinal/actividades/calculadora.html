@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+   
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+    <link rel="stylesheet"  href="../css/csshome1.css"  />
+    <!---<script href="../JavaScript\calculadora.js"></script>!--->
+   
+  </head>
+  
+    
+   
+  <body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <div class="icono"><a class="a1" href="/html/home1.html"><img id="logo1" src="/imagenes/logo1.png" alt="Logo">
+                </div>
+                <div class="inicio"><a class="a1" href="/html/home1.html">Inicio</a></div>
+                <div class="sobremi"><a class="a1" href="/html/sobremi1.html">Sobre mí</a></div>
+                <div class="contactar"><a class="a1" href="/html/contactar.html">Contactar</a></div>
+            </div>
+            <div class="texto-principal">
+                <h1></h1>
+            </div>
+        </header>
+        <section class="section">
+
+            <div class="articulosAlical">
+              <table id="calculadora">
+                <tr>
+                  <td colspan="4">
+                    <input
+                      type="text"
+                      id="valor_numero"
+                      maxlength="20"
+                      value="0"
+                      class="caja_valor"
+                      readonly="true"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <input
+                      type="button"
+                      id="potencia"
+                      value="exp"
+                      class="boton_grande funcion"
+                      onclick="operar(5)"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="cociente"
+                      value="/"
+                      class="boton funcion"
+                      onclick="operar(4)"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="producto"
+                      value="x"
+                      class="boton funcion"
+                      onclick="operar(3)"
+                    />
+                    <input
+                      type="button"
+                      id="valor absoluto"
+                      value="V.A"
+                      class="boton funcion"
+                      onclick="operar(6)"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="button"
+                      id="7"
+                      value="7"
+                      class="boton"
+                      onclick="pulsarNumero('7')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="8"
+                      value="8"
+                      class="boton"
+                      onclick="pulsarNumero('8')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="9"
+                      value="9"
+                      class="boton"
+                      onclick="pulsarNumero('9')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="restar"
+                      value="-"
+                      class="boton funcion"
+                      onclick="operar(2)"
+                    />
+                    <input
+                      type="button"
+                      id="raiz"
+                      value="Raiz"
+                      class="boton funcion"
+                      onclick="operar(7)"
+                    />
+          
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="button"
+                      id="4"
+                      value="4"
+                      class="boton"
+                      onclick="pulsarNumero('4')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="5"
+                      value="5"
+                      class="boton"
+                      onclick="pulsarNumero('5')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="6"
+                      value="6"
+                      class="boton"
+                      onclick="pulsarNumero('6')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="sumar"
+                      value="+"
+                      class="boton funcion"
+                      onclick="operar(1)"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="button"
+                      id="1"
+                      value="1"
+                      class="boton"
+                      onclick="pulsarNumero('1')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="2"
+                      value="2"
+                      class="boton"
+                      onclick="pulsarNumero('2')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="3"
+                      value="3"
+                      class="boton"
+                      onclick="pulsarNumero('3')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="igual"
+                      value="="
+                      class="boton funcion"
+                      onclick="esIgual()"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <input
+                      type="button"
+                      id="0"
+                      value="0"
+                      class="boton_grande"
+                      onclick="pulsarNumero('0')"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id=","
+                      value=","
+                      class="boton"
+                      onclick="pulsarComa()"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="button"
+                      id="C"
+                      value="C"
+                      class="boton funcion"
+                      onclick="limpiar()"
+                    />
+                  </td>
+                </tr>
+              </table>  
+
+                
+
+
+
+                
+            </div>
+            <aside class="aside">
+                <div class="publicidad"><a href="/actividades/calculadora.html">Calculadora<img class="calculadora"
+                            src="/imagenes/tt.png"></a></div>
+                <div class="publicidad"><a href="/actividades/ahorcado1.html">Juego del ahorcado<img class="ahorcado"
+                            src="/imagenes/juegoa.png"></a></div>
+                <div class="publicidad"><a href="https://flexboxfroggy.com/#es" target="_blank">Juego de la rana<img
+                            class="ahorcado" src="/imagenes/raa.png"></a></div>
+                <div class="publicidad"><a href="https://www.minijuegos.com/" target="_blank">Otros juegos<img
+                            class="ahorcado" src="/imagenes/otros.png"></a></div>
+            </aside>
+        </section>
+        <footer class="footer9">
+            <div class="pie0"><a href="/html/home1.html"><img id="logo" src="/imagenes/logo1.png" alt="volver"
+                        height="50px"></a>
+            </div>
+            <nav class="pie">
+
+                <p class="copyright"> &copy; Marcos Gonzalez</p>
+            </nav>
+        </footer>
+    </div>
+
+</body>
+<script>let num1 = 0;
+  let num2 = 0;
+  let opera;
+  
+  function pulsarNumero(numero) {
+    if (num1 == 0 && num1 !== "0.") {
+      num1 = numero;
+    } else {
+      num1 += numero;
+    }
+    refrescar();
+  }
+  
+  function pulsarComa() {
+    if (num1 == 0) {
+      num1 = "0.";
+    } else if (num1.indexOf(".") == -1) {
+      num1 += ".";
+    }
+    refrescar();
+  }
+  
+  function limpiar() {
+    num1 = 0;
+    num2 = 0;
+    refrescar();
+  }
+  
+  function operar(valor) {
+    if (num1 == 0) {
+      num1 = parseFloat(document.getElementById("valor_numero").value);
+    }
+    num2 = parseFloat(num1);
+    num1 = 0;
+    opera = valor;
+  }
+  
+  function esIgual() {
+    num1 = parseFloat(num1);
+    switch (opera) {
+      case 1:
+        num1 += num2;
+        break;
+      case 2:
+        num1 = num2 - num1;
+        break;
+      case 3:
+        num1 *= num2;
+        break;
+      case 4:
+        num1 = num2 / num1;
+        break;
+      case 5:
+        num1 = Math.pow(num2, num1);
+        break;
+      case 6:
+        if(num2 <0){
+        num1=num2*(-1);}else{num1=num2;}//Gema , tienes que darle a la tecla "V.A " y luego al = y te sale.
+        break;
+      case 7:
+       num1=Math.sqrt(num2);
+        break;
+        
+    }
+     function valorAbsoluto(){
+      if(num2 <0){
+        num1=num2*(-1);}
+        
+      else if(num2>0){
+      num1=num2;}
+      
+    }
+    refrescar();
+    num2 = parseFloat(num1);
+    num1 = 0;
+  }
+  
+  function refrescar() {
+    document.getElementById("valor_numero").value = num1;
+  }</script>
+  
+</html>
